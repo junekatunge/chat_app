@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders', 
+    'message',
 ]
+CORS_ORIGIN_ALLOW_ALL = True #to allow requests from all origins to my application
+
+STREAM_API_KEY = 'z88arewwkquw'
+STREAM_API_SECRET = '66p7qmxjxnkju3mcbsrbyn54e24ee4jk868zfz6qdwfmkejtcy6xpk3ccrhaeqcq'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
