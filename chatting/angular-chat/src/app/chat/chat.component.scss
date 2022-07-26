@@ -1,0 +1,34 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  .chat-box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    .message-area {
+      border-radius: 8px 8px 0 0;
+      max-height: 450px;
+      height: 450px;
+      padding: 0 20px 20px 20px;
+      overflow: auto;
+      background-color: #f2f5e7;
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px 0 0;
+        p {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid #ec3062;
+        }
+      }
+    
