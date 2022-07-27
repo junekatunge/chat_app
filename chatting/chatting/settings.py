@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'message',
 ]
 CORS_ORIGIN_ALLOW_ALL = True #to allow requests from all origins to my application
+CORS_ALLOWED_ORIGINS = [
+"http://localhost:4000",
+"http://127.0.0.1:4000"
+]
 
 STREAM_API_KEY = 'z88arewwkquw'
 STREAM_API_SECRET = '66p7qmxjxnkju3mcbsrbyn54e24ee4jk868zfz6qdwfmkejtcy6xpk3ccrhaeqcq'
@@ -48,11 +52,13 @@ STREAM_API_SECRET = '66p7qmxjxnkju3mcbsrbyn54e24ee4jk868zfz6qdwfmkejtcy6xpk3ccrh
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'chatting.urls'

@@ -20,6 +20,7 @@ import { ChatComponent } from './chat/chat.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: '', component: ChatComponent },
       { path: 'join', component: JoinComponent },
     ]),
   ],

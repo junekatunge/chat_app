@@ -15,7 +15,7 @@ declare interface UserInfo {
 export class StreamService {
   constructor() {}
   streamClient: StreamChat;
-  currentUser: ConnectAPIResponse;
+  currentUser!: any; // | ConnectAPIResponse |void | ConnectionOpen<StreamChatGenerics>;
 
   public async initClient(user: UserInfo): Promise<Channel> {
     this.streamClient = new StreamChat(user.apiKey);
